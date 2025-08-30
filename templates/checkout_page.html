@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+{% include 'include/header.html' %}
+
+  <section class="checkout_section layout_padding">
+        <div class="container">
+            <div class="heading_container heading_center">
+                <h2>Checkout</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Billing Address</h4>
+                    <form>
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="example@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="123 Street, City" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" id="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">Zip Code</label>
+                            <input type="text" class="form-control" id="zip" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h4>Payment Details</h4>
+                    <form>
+                        <div class="form-group">
+                            <label for="cardName">Cardholder Name</label>
+                            <input type="text" class="form-control" id="cardName" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="expiry">Expiry Date</label>
+                                <input type="text" class="form-control" id="expiry" placeholder="MM/YY" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cvv">CVV</label>
+                                <input type="text" class="form-control" id="cvv" placeholder="123" required>
+                            </div>
+                        </div>
+                        <h4 class="mt-4">Purchased Items</h4>
+                        <ul class="list-group mb-3">
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Book 1</span>
+                                <span>$99.99</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Book 2</span>
+                                <span>$49.99</span>
+                            </li>
+                        </ul>
+                        <button type="submit" class="btn btn-success mt-3 w-100">Complete Purchase</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">Free Html Templates</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="{% static 'front/js/jquery-3.4.1.min.js' %}"></script>
+  <!-- bootstrap js -->
+  <script src="{% static 'front/js/bootstrap.js' %}"></script>
+  <!-- custom js -->
+  <script src="{% static 'front/js/custom.js' %}"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>

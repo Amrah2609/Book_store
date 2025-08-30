@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+{% include 'include/header.html' %}
+
+  <section class="search_results layout_padding">
+        <div class="container">
+            <div class="heading_container heading_center">
+                <h2 class="mb-4">Search Results</h2>
+                <p><strong>30</strong> results for "<span>keyword</span>"</p>
+            </div>
+            <div class="row">
+                <div class="col-md-3" id="book-list">
+                    <div class="card mb-4">
+                        <img src="images/book1.jpg" class="card-img-top" alt="Book Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Book Title</h5>
+                            <p class="card-text">Short description of the book goes here.</p>
+                            <p>Price: $19.99</p>
+                            <a href="#" class="btn btn-success">Add to card</a>
+                            <a href="#" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" id="book-list">
+                    <div class="card mb-4">
+                        <img src="images/book1.jpg" class="card-img-top" alt="Book Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Book Title</h5>
+                            <p class="card-text">Short description of the book goes here.</p>
+                            <p>Price: $19.99</p>
+                            <a href="#" class="btn btn-success">Add to card</a>
+                            <a href="#" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" id="book-list">
+                    <div class="card mb-4">
+                        <img src="images/book1.jpg" class="card-img-top" alt="Book Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Book Title</h5>
+                            <p class="card-text">Short description of the book goes here.</p>
+                            <p>Price: $19.99</p>
+                            <a href="#" class="btn btn-success">Add to card</a>
+                            <a href="#" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" id="book-list">
+                    <div class="card mb-4">
+                        <img src="images/book1.jpg" class="card-img-top" alt="Book Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Book Title</h5>
+                            <p class="card-text">Short description of the book goes here.</p>
+                            <p>Price: $19.99</p>
+                            <a href="#" class="btn btn-success">Add to card</a>
+                            <a href="#" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" id="book-list">
+                    <div class="card mb-4">
+                        <img src="images/book1.jpg" class="card-img-top" alt="Book Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Book Title</h5>
+                            <p class="card-text">Short description of the book goes here.</p>
+                            <p>Price: $19.99</p>
+                            <a href="#" class="btn btn-success">Add to card</a>
+                            <a href="#" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more book cards dynamically -->
+            </div>
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">Free Html Templates</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="{% static 'front/js/jquery-3.4.1.min.js' %}"></script>
+  <!-- bootstrap js -->
+  <script src="{% static 'front/js/bootstrap.js' %}"></script>
+  <!-- custom js -->
+  <script src="{% static 'front/js/custom.js' %}"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>

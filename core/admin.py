@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from core.models import IndexPage
+
+
+@admin.register(IndexPage)
+class IndexPageAdmin(admin.ModelAdmin):
+    list_display = ("name", "title", "image")
+    search_fields = ("name",)
+    list_filter = ("name",)
