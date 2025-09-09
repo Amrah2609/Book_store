@@ -6,7 +6,7 @@
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Site Metas -->
-  <link rel="icon" href="images/favicon.png" type="image/gif" />
+  <link rel="icon" href="{% static 'front/images/favicon.png' %}" type="image/gif" />
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
@@ -67,7 +67,7 @@
                 <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
               </li>
             </ul>
-            <form class="search_form" method="GET" action="search.html">
+            <form class="search_form" method="GET" action="{% url 'search' %}">
               <input type="text" name="q" class="form-control" placeholder="Search here...">
               <button class="" type="submit">
                 <i class="fa fa-search" aria-hidden="true"></i>

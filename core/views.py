@@ -1,22 +1,33 @@
-from django.shortcuts import render
-
-from core.models import IndexPage
-
-
+from django.shortcuts import render, redirect
+from core.models import IndexPage, BookCategory, CategorySection, AboutPage, ContactMessage
+from core.forms import ContactForm
+from django.contrib import messages
 # Create your views here.
 
 
 def index(request):
-    content = {"index_pages": IndexPage.objects.all()}
+    about = AboutPage.objects.first()
+    section = CategorySection.objects.first()
+    categories = BookCategory.objects.all()
+    content = {"index_pages": IndexPage.objects.all(),
+    "about": about,
+    "section": section,
+    "categories": categories,
+    }
     return render(request, "index.html", content)
 
 
 def about(request):
-    return render(request, "about.html")
+    content = {"about": AboutPage.objects.first()}
+    return render(request, "about.html", content)
 
 
 def categories(request):
-    return render(request, "categories.html")
+    section = CategorySection.objects.first()
+    content = {
+        "section": section,
+        "categories": BookCategory.objects.all(),}
+    return render(request, "categories.html", content)
 
 
 def blog(request):
@@ -24,7 +35,18 @@ def blog(request):
 
 
 def contact(request):
-    return render(request, "contact.html")
+    form = ContactForm()
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Mesaj göndərildi.")
+            return redirect("contact")
+    content = {
+        "form": form,
+
+    }
+    return render(request, "contact.html", content)
 
 
 def card(request):
